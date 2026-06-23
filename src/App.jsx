@@ -1,32 +1,26 @@
-import { stats } from "./data";
-import StatsCard from "./components/StatsCard";
-import SubscriberTable from "./components/SubscriberTable";
-import BroadcastTable from "./components/BroadcastTable";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
+import DashboardPage from "./pages/DashboardPage";
+import CampaignsPage from "./pages/CampaignsPage";
+import SubscribersPage from "./pages/SubscribersPage";
+import TemplatesPage from "./pages/TemplatesPage";
 import "./App.css";
 
 function App() {
   return (
-    <div className="app-layout">
-      <Sidebar />
-      <main className="main-content">
-        <header className="page-header">
-          <h1>Email Campaign Dashboard</h1>
-          <p className="page-subtitle">Monitor your email performance at a glance</p>
-        </header>
-
-        <section className="stats-grid">
-          {stats.map((s) => (
-            <StatsCard key={s.label} {...s} />
-          ))}
-        </section>
-
-        <section className="tables-section">
-          <SubscriberTable />
-          <BroadcastTable />
-        </section>
-      </main>
-    </div>
+    <BrowserRouter>
+      <div className="app-layout">
+        <Sidebar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<DashboardPage />} />
+            <Route path="/campaigns" element={<CampaignsPage />} />
+            <Route path="/subscribers" element={<SubscribersPage />} />
+            <Route path="/templates" element={<TemplatesPage />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 

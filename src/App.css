@@ -412,6 +412,202 @@ tr:last-child td {
   font-weight: 500;
 }
 
+/* ── Campaign Summary ── */
+.campaigns-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.campaign-stat {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.campaign-stat-value {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.campaign-stat-label {
+  display: block;
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ── Segment Tabs ── */
+.segment-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.segment-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.segment-tab:hover {
+  background: #f8fafc;
+}
+
+.segment-active {
+  background: #eff6ff;
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.segment-count {
+  background: #f1f5f9;
+  padding: 1px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.segment-active .segment-count {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+/* ── Template Grid ── */
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.template-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.template-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.template-selected {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.template-preview {
+  height: 160px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+}
+
+.template-preview-overlay {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-preview-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  width: 80%;
+}
+
+.template-preview-bar.short {
+  width: 50%;
+}
+
+.template-info {
+  padding: 16px;
+}
+
+.template-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.template-info p {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.template-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.template-actions {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px 16px;
+}
+
+/* ── Send Test Feedback ── */
+.send-test-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sent-feedback {
+  font-size: 13px;
+  font-weight: 500;
+  color: #16a34a;
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Select ── */
+.search-input[readonly],
+select.search-input {
+  cursor: pointer;
+  appearance: auto;
+}
+
+/* ── NavLink active state fix ── */
+a.nav-item.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+a.nav-item.active:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .sidebar {

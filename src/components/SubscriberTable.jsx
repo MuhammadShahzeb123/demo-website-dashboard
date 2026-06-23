@@ -37,11 +37,10 @@ export default function SubscriberTable() {
             onChange={(e) => setSearch(e.target.value)}
             className="search-input"
           />
-          {/* BROKEN BUTTON 1: does nothing on click */}
           <button className="btn btn-outline" onClick={() => {}}>
             Export CSV
           </button>
-          <button className="btn btn-primary" onClick={() => alert("New subscriber form would open!")}>
+          <button className="btn btn-primary" onClick={() => {}}>
             + Add Subscriber
           </button>
         </div>
